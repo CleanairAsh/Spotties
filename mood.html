@@ -28,6 +28,66 @@
             </div><img src="assets/symbols/TheJellyfishInv.png" style="width: 64px;height: 64px;">
         </div>
     </div>
+        <script>
+        const moods = [
+            { title: "Dreadful", symbol: "The Waves" },
+            { title: "Horrible", symbol: "The Gate" },
+            { title: "Bad", symbol: "The Wisp" },
+            { title: "Poor", symbol: "The Murk" },
+            { title: "Standard", symbol: "The Sunset" },
+            { title: "Good", symbol: "The Bloom" },
+            { title: "Splendid", symbol: "The House" },
+            { title: "Divine", symbol: "The Jellyfish" }
+        ];
+
+        async function loadMood() {
+
+            try {
+
+
+                const response = await fetch("mood.json", {
+                    cache: "no-store"
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch mood.json");
+                }
+
+                const data = await response.json();
+
+                const focus = data.current.mood + 2;
+
+                const info = moods[focus];
+
+                const CENTER = 301;
+                const SPACING = 86;
+
+                const offset = CENTER - (SPACING * focus);
+
+                document.querySelector(".symbol-strip").style.transform =
+                    `translateX(${offset}px)`;
+
+                const moodText = document.getElementById("currentMood");
+
+                const sign = data.current.mood >= 0 ? "+" : "";
+
+                moodText.innerHTML =
+                    `<strong>Current mood: ${sign}${data.current.mood} (${info.title})</strong>`;
+
+            }
+            catch (error) {
+
+                console.error(error);
+
+                document.getElementById("currentMood").innerHTML =
+                    "<strong>Current mood: Unknown</strong>";
+
+            }
+
+        }
+
+        loadMood();
+    </script>
 </body>
 
 </html>

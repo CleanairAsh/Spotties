@@ -50,7 +50,7 @@
             transform: translateX(calc(301px - (86px * var(--focus))));
             */
         }
-
+/*wot*/
         .symbol-strip img {
             width: 64px;
             height: 64px;

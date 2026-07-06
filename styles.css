@@ -1,4 +1,9 @@
-        .the-symbols {
+
+        * {
+            font-family: arial;
+        }
+
+.the-symbols {
             --focus: 3;
             overflow-x: hidden;
             display: flex;

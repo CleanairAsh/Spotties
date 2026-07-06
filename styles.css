@@ -3,6 +3,12 @@
             font-family: arial;
         }
 
+        p,
+        li {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
 .the-symbols {
             --focus: 3;
             overflow-x: hidden;

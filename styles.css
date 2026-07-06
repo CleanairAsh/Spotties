@@ -44,3 +44,8 @@
             height: 64px;
             flex-shrink: 0;
         }
+
+        #currentMood {
+            margin: 10px auto 10px auto;
+            text-align: center;
+        }

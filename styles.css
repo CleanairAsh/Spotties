@@ -15,12 +15,12 @@
             overflow-x: hidden;
             display: flex;
             align-items: center;
-            width: 328px;
+            width: 334px;
             transform: translateX(calc((4 - var(--focus)) * 64px));
         }
 
         .symbol-window {
-            width: 328px;
+            width: 334px;
             display: flex;
             justify-content: center;
             align-items: center;

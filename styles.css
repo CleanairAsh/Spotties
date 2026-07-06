@@ -7,7 +7,7 @@
         li {
             line-height: 1.5;
             font-size: 16px;
-            padding: 0 10px 0 10px;
+
         }
 
 .the-symbols {
@@ -61,4 +61,8 @@
         #currentMood {
             margin: 10px auto 10px auto;
             text-align: center;
+        }
+
+        .what p {
+            padding: 0 10px 0 10px;
         }
